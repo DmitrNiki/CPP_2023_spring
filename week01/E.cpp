@@ -22,11 +22,7 @@ int main(){
     cin >> a >> b;
 
     if ((a >= 1 && b >= 1) && SCM(a, b) != 0){
-        cout << "the SCM of " << a << " and " << b << " is " << SCM(a, b) << endl;
-    } else if (a < 1 || b < 1) {
-        cout << "Error: both numbers should be positive." << endl;
-    }else if (SCM(a, b) == 0){
-        cout << "There are none common multiple of numbers in INT." << endl;
+        cout << SCM(a, b) << endl;
     }
     return 0;
 }

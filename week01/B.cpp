@@ -7,9 +7,7 @@ int main() {
     int a = 0, b = 0, c = 0;
     float x_1 = 0, x_2 = 0, D = 0;
     
-    cin >> a;
-    cin >> b;
-    cin >> c;
+    cin >> a >> b >> c;
 
     D = sqrt(b*b - 4*a*c);
     if (D > 0) {

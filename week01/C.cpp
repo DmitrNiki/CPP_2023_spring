@@ -11,9 +11,7 @@ int main() {
         for (int i = 0;  i < x; i++){
             f *= (x - i);
             }
-        cout <<"x = " << x << "; x! = " << f << endl;    
-    } else if (x < 0){
-        cout << "Error: x must be positive." << endl;
-    }
+        cout << f << endl;    
+    } 
     return 0;
 }

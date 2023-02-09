@@ -19,11 +19,7 @@ int main() {
     cin >> a >> b;
 
     if (a >= 1 && b >= 1){
-        cout << "the LCD of " << a
-        << " and " << b
-        << " is " << LCD(a, b) << endl;
-    } else {
-        cout << "Error: both numbers should be positive." << endl;
+        cout << LCD(a, b) << endl;
     }
     return 0;
 }
