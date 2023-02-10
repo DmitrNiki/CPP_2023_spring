@@ -10,7 +10,7 @@ int SCM(int n, int m){
     }
 
     for (int i = max; i <= m*n; i += max){
-        if (i % m == 0 && i % n == 0){
+        if ((i % m == 0 && i % n == 0) && p == 0){
             p = i;
         }
     }
