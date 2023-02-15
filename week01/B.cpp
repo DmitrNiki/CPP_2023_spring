@@ -13,7 +13,7 @@ int main() {
     if (D > 0 && a != 0) {
         x_1 = (-b + D)/(2*a);
         x_2 = (-b - D)/(2*a);
-        cout << x_1 << ' ' << x_2 << endl;
+        cout << x_2 << ' ' << x_1 << endl;
     } else if (D == 0 && a != 0) {
         x_1 = (-b)/(2*a);
         cout << x_1 << endl;
