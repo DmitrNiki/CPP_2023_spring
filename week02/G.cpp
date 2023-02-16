@@ -2,14 +2,16 @@
 
 using namespace std;
 
-int recursive_power(int base, int power){
+long long recursive_power(int base, int power){
     if (power > 0){
         return base * recursive_power(base, power - 1);
+    } else if (power == 0){
+        return 1;
     } 
-   return 1;
+    return 0;
 }
 
-int num_len(int k){
+int num_len(long long k){
     int count = 0;
 
     do{
@@ -20,10 +22,10 @@ int num_len(int k){
     return count;
 }
 
-int palindrom(int n){
+int palindrom(long long n){
     int flag = 1;
-    int x = 0, y = 0;
-    for (int i = 1; i <= (num_len(n) / 2) + 1; i++){
+    long long x = 0, y = 0;
+    for (int i = 1; i <= (num_len(n)/ 2) + 1; i++){
         x = ((n % recursive_power(10, i)) / recursive_power(10, i - 1));
         y = ((n / recursive_power(10, num_len(n) - i)) % 10);
         if (x != y){
@@ -34,7 +36,7 @@ int palindrom(int n){
 }   
 
 int main(){
-    int x;
+    long long x;
 
     cin >> x;
 
