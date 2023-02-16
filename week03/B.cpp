@@ -21,8 +21,7 @@ void arr_input(int arr[N]){
 }
 
 void arr_ringRmove(int arr[N]){
-    int tmp = 0;
-    for (int i = 0; i <= N - 1 ; i++){
+    for (int i = 0; i < N - 1 ; i++){
         swap(arr[N - 2 - i], arr[N - 1 - i]);   
     }
 }
