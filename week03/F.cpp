@@ -13,17 +13,23 @@ void swap(int &lha, int &rha){
 }
 
 void arr_input(int (&arr)[N]){
-    int x = 0;
     for (int i = 0; i < N; i++){
-        cin >> x;
-        arr[i] = x;
+        cin >> arr[i];
     }
 }
 
-void arr_ringRmove(int (&arr)[N]){
-    for (int i = 0; i < N - 1 ; i++){
-        swap(arr[N - 2 - i], arr[N - 1 - i]);   
-    }
+int binsearch(int (&arr)[N]){
+    int k = N / 2;
+    int l = N / 4;
+    do{
+        if(arr[k] == 0){
+            k += l;
+        } else {
+            k -= l;
+        }
+        l /= 2;
+    } while(!(arr[k] == 0 && arr[k + 1] == 1));
+    return k;
 }
 
  void arr_output(int (&arr)[N]){
@@ -34,9 +40,9 @@ void arr_ringRmove(int (&arr)[N]){
  }
 
 int main() {
-    int a[N] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};  // array initialization
+    int a[N] = {};  // array initialization
     arr_input(a);
-    arr_ringRmove(a);
+    cout << binsearch(a) << endl;
     arr_output(a);
     return 0;
 }

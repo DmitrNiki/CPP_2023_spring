@@ -12,20 +12,20 @@ void swap(int &lha, int &rha){
     rha = tmp;
 }
 
-void arr_input(int arr[N]){
+void arr_input(int (&arr)[N]){
     for (int i = 0; i < N; i++){
         cin >> arr[i];
     }
 }
 
-void arr_ringRmove(int arr[N]){
+void arr_ringRmove(int (&arr)[N]){
     int tmp = 0;
     for (int i = 0; i < N - 1 ; i++){
         swap(arr[N - 2 - i], arr[N - 1 - i]);   
     }
 }
 
- void arr_output(int arr[N]){
+ void arr_output(int (&arr)[N]){
     for (int i = 0; i < N; i++){
         cout << arr[i] << " "; 
     }
