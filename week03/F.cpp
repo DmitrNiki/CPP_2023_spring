@@ -19,17 +19,18 @@ void arr_input(int (&arr)[N]){
 }
 
 int binsearch(int (&arr)[N]){
-    int k = N / 2;
-    int l = N / 4;
+    int left = -1;
+    int right = N - 1;
+    int mid = 0; 
     do{
-        if(arr[k] == 0){
-            k += l;
+        mid = (left + right)/2;
+        if(arr[mid] == 0){
+            left = mid;
         } else {
-            k -= l;
+            right = mid;
         }
-        l /= 2;
-    } while(!(arr[k] == 0 && arr[k + 1] == 1));
-    return k;
+    } while(!(arr[mid] == 0 && arr[mid + 1] == 1));
+    return mid;
 }
 
  void arr_output(int (&arr)[N]){
