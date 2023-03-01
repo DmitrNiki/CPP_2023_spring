@@ -34,7 +34,7 @@ void arr_ringRmove(int (&arr)[N]){
  }
 
 int main() {
-    int a[N] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};  // array initialization
+    int a[N] = {};  // array initialization
     arr_input(a);
     arr_ringRmove(a);
     arr_output(a);
