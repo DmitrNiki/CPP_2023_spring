@@ -22,7 +22,7 @@ void arr_input(int (&arr)[N]){
 
 void arr_swap(int (&arr)[N]){
     int tmp = 0;
-    for (int i = 0; i <= (N/2) ; i++){
+    for (int i = 0; i < (N/2) ; i++){
         swap(arr[i], arr[N - 1 -  i]);   
     }
 }
