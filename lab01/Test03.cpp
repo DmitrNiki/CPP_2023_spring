@@ -71,6 +71,7 @@ double timer(int (&a)[N], int (&b)[X], int (&d)[N]){
 
 int main(){
     double ave = 0;
+    double l_ave = 0;
     int c = 100;
     int a[N] = {};
     int b[X] = {};
@@ -83,8 +84,10 @@ int main(){
         b[j] = rand() % N;
     }
     for (int k = 1; k <= c; k++){
+        l_ave = ave;
         ave += timer(a, b, d);
-        std::cout << timer(a, b, d) << " ";
+        // std::cout << timer(a, b, d) << " ";
+        std::cout << ave - l_ave << " " << k << " " << ave/k << std::endl;
     }
     std::cout << ave/c << std::endl;
     return 0;  
