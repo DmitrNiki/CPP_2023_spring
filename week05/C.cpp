@@ -25,7 +25,7 @@ int main(){
     int* a = new int;
     i = reader(a);
     writer(a, i);
-
+    
     return 1;
 }
 
