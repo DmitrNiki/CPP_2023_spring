@@ -22,8 +22,10 @@ void free_memory(int* ptr){
 int main() {
     int N = 0;
     int* ptr = nullptr;
+    int x = 0;
     cin >> N;
     cout << reserve_memory(N, ptr) << endl;
+    cin>>x;
     free_memory(ptr);
     return 0;
 }
