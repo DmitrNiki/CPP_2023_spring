@@ -3,45 +3,47 @@
 using std::cout;
 using std::endl;
 
-struct Node{
-    int key = 0;
-    Node* next = nullptr;
+struct Node
+{
+    int key    = 0;
+    Node *next = nullptr;
 };
 
-void push_front(Node*& head, int new_key){
-    if (head == nullptr){
-        head = new Node;
-        head->key = new_key;
+void push_front(Node *&head, int new_key) {
+    if (head == nullptr) {
+        head       = new Node;
+        head->key  = new_key;
         head->next = nullptr;
         return;
     }
-    Node* new_node = new Node;
-    new_node->key = new_key;
+    Node *new_node = new Node;
+    new_node->key  = new_key;
     new_node->next = head;
-    head = new_node;
+    head           = new_node;
 }
 
-void push_back(Node*& head, int new_key){
-    if (head == nullptr){
-        head = new Node;
+void push_back(Node *&head, int new_key) {
+    if (head == nullptr) {
+        head      = new Node;
         head->key = new_key;
         return;
     }
-    Node* current = head;
-    while (current->next != nullptr){
+    Node *current = head;
+    while (current->next != nullptr) {
         current = current->next;
     }
-    current->next = new Node;
-    current->next->key = new_key;
+    current->next       = new Node;
+    current->next->key  = new_key;
+    current->next->next = nullptr;
 }
 
-void insert_after(Node*& head_ref, int new_key){
-    if (head_ref == nullptr){
+void insert_after(Node *&head_ref, int new_key) {
+    if (head_ref == nullptr) {
         return;
     }
-    Node* new_el = new Node;
-    new_el->next = head_ref->next;
-    new_el->key = new_key;
+    Node *new_el   = new Node;
+    new_el->next   = head_ref->next;
+    new_el->key    = new_key;
     head_ref->next = new_el;
 }
 
